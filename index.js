@@ -1,9 +1,9 @@
 
 (async () => {
     const database = require('./db');
-    const Professor = require ('./Model/professor')
-    const Aluno = require ('./Model/aluno')
-    const Escola = require ('./Model/escola')
+    const Professor = require ('./src/Model/professor')
+    const Aluno = require ('./src/Model/aluno')
+    const Escola = require ('./src/Model/escola')
 
  
     try {
