@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "pg": "^8.8.0",
+    "sequelize": "^6.25.8"
+  },
+  "name": "vidadealuno",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Josuerodrigojr/VidaDeAluno.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Josuerodrigojr/VidaDeAluno/issues"
+  },
+  "homepage": "https://github.com/Josuerodrigojr/VidaDeAluno#readme"
+}
