@@ -1,36 +1,38 @@
-const Sequelize = require('sequelize');
+const { DataTypes } = require('sequelize');
 const database = require('../../db');
+
+
  
 const Professor = database.define('professores', {
     id:{
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: DataTypes.INTEGER
       },
       primeiroNome:{
         allowNull: false,
-        type: Sequelize.STRING
+        type: DataTypes.STRING
       },
       ultimoNome:{
         allowNull: false,
-        type: Sequelize.STRING
+        type: DataTypes.STRING
       },
       telefone:{
         allowNull: false,
-        type: Sequelize.STRING
+        type: DataTypes.STRING
       },
       email:{
         allowNull: false,
-        type: Sequelize.STRING
+        type: DataTypes.STRING
       },
       escola:{
         allowNull: false,
-        type: Sequelize.STRING
+        type: DataTypes.STRING
       },
       senha:{
         allowNull: false,
-        type: Sequelize.STRING
+        type: DataTypes.STRING
       }
 })
  

@@ -4,6 +4,7 @@
     const Professor = require ('./src/Model/professor')
     const Aluno = require ('./src/Model/aluno')
     const Escola = require ('./src/Model/escola')
+    console.log(database, 'database')
 
  
     try {
