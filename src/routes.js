@@ -1,10 +1,28 @@
 const express = require('express')
 const controllerProfessor = require('./Controllers/professorController')
+const controllerAluno = require('./Controllers/aluno')
 
 
 const router = express.Router()
 
-router.get('/professores', controllerProfessor.getProfessores);
+//Rotas para a visualização da escola para os professores.
+router.get('/escola/professores/:email', controllerProfessor.getProfessoresEmail)
+
+router.get('/escola/professores/:id', controllerProfessor.getProfessoresId)
+
+router.get('/escola/professores', controllerProfessor.getProfessores);
+
+//Rota para adicionar o professor
+
+router.post('/escola/professores', controllerProfessor.postProfessores)
+
+//Rota para verificar a quantidade de alunos
+
+router.get('/professor/aluno', controllerAluno.getAlunos)
+
+
+
+
 
 
 module.exports = router

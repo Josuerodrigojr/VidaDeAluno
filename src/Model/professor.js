@@ -22,8 +22,17 @@ const Professor = database.define('professores', {
         allowNull: false,
         type: DataTypes.STRING
       },
+      materia:{
+        allowNull: false,
+        type: DataTypes.STRING
+      },
       email:{
         allowNull: false,
+        unique: true,
+         //Validate, vai verificar se o padrão que será digitado será um e-mail.
+      validate: {
+        isEmail: true
+      },
         type: DataTypes.STRING
       },
       escola:{
@@ -34,6 +43,6 @@ const Professor = database.define('professores', {
         allowNull: false,
         type: DataTypes.STRING
       }
-})
+}, {tableName: 'professores'})
  
 module.exports = Professor;

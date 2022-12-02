@@ -26,6 +26,11 @@ const Aluno = database.define('alunos', {
       },
       email:{
         allowNull: false,
+        unique: true,
+         //Validate, vai verificar se o padrão que será digitado será um e-mail.
+      validate: {
+        isEmail: true
+      },
         type: Sequelize.STRING
       },
       escola:{
@@ -36,6 +41,6 @@ const Aluno = database.define('alunos', {
         allowNull: false,
         type: Sequelize.STRING
       }
-})
+}, {tableName: 'alunos'})
  
 module.exports = Aluno;

@@ -14,6 +14,11 @@ const Escola = database.define('escolas', {
       },
       email:{
         allowNull: false,
+        unique: true,
+         //Validate, vai verificar se o padrão que será digitado será um e-mail.
+      validate: {
+        isEmail: true
+      },
         type: Sequelize.STRING
       },
       escola:{
