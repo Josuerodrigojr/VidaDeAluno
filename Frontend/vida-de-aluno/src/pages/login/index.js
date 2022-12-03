@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { Button } from 'reactstrap'
 import './style.scss'
 
@@ -24,7 +25,7 @@ function Login (){
   <div className='espacamento'>
   <Button>Entrar</Button>
   
-  <Button>Voltar</Button>
+  <Link to='/'><Button>Voltar</Button></Link>
   </div>
 </form>
 
