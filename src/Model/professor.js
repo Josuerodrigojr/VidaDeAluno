@@ -1,4 +1,4 @@
-const { DataTypes } = require('sequelize');
+const { DataTypes, Sequelize } = require('sequelize');
 const database = require('../../db');
 
 
@@ -17,6 +17,14 @@ const Professor = database.define('professores', {
       ultimoNome:{
         allowNull: false,
         type: DataTypes.STRING
+      },
+      escola:{
+        allowNull: false,
+        type: Sequelize.STRING
+      },
+      materia:{
+        allowNull: false,
+        type: Sequelize.STRING
       },
       telefone:{
         allowNull: false,

@@ -16,6 +16,10 @@ const Aluno = database.define('alunos', {
         allowNull: false,
         type: Sequelize.STRING
       },
+      escola:{
+        allowNull: false,
+        type: Sequelize.STRING
+      },
       serie:{
         allowNull: false,
         type: Sequelize.STRING
