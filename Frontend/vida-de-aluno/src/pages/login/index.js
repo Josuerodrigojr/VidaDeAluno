@@ -8,7 +8,7 @@ function Login (){
     <h1>Login</h1>
 
     <br/>
-
+<div  className='centralizar'>
     <form>
   <label>
   <br/>
@@ -26,8 +26,14 @@ function Login (){
   <Button>Entrar</Button>
   
   <Link to='/'><Button>Voltar</Button></Link>
+  <br/>
+
   </div>
+  <Link to='/cadastro'>Não tem conta? Faça o registro</Link>
 </form>
+
+
+</div>
 
     </>
 }

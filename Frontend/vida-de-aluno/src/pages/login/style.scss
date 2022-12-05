@@ -40,3 +40,10 @@ Button {
     justify-content: space-between;
     align-items: flex-end;
  }
+
+ .centralizar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+ }
