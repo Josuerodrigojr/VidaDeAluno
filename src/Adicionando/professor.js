@@ -11,7 +11,7 @@
             ultimoNome: 'hsjdhsa',
             telefone: 'dsuydusiydsad',
             materia: 'Matematica',
-            email: 'fsdfsdfsdfsdfsdf@gmail.com',
+            email: 'fsdfsdfsdghghjgfsdfsdf@gmail.com',
             escola: 'jksdksajhd',
             senha: 'dhjsahdjksad',
         })
