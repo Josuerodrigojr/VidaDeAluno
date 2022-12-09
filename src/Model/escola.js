@@ -25,10 +25,6 @@ const Escola = database.define('escolas', {
         allowNull: false,
         type: Sequelize.STRING
       },
-      endereco:{
-        allowNull: false,
-        type: Sequelize.STRING
-      },
       senha:{
         allowNull: false,
         type: Sequelize.STRING

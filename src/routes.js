@@ -5,6 +5,26 @@ const controllerEscola = require('./Controllers/escolaController')
 
 const router = express.Router()
 
+//Rotas dos professores
+
+//Rota para adicionar o professor
+
+router.post('/professores', controllerProfessor.postProfessores)
+
+//Rota para verificar a quantidade de alunos
+
+router.get('/professor/aluno', controllerAluno.getAlunos)
+
+//Rota dos alunos
+
+//Rota das escolas
+
+//Rota para verificar todos os professores
+
+router.get('/escola/professores', controllerProfessor.getProfessores);
+
+// Verificar abaixo depois
+
 //Rotas para verificar as escolas registradas
 
 router.get('/escola', controllerEscola.getEscolas)
@@ -14,15 +34,8 @@ router.get('/escola/professores/:email', controllerProfessor.getProfessoresEmail
 
 router.get('/escola/professores/:id', controllerProfessor.getProfessoresId)
 
-router.get('/escola/professores', controllerProfessor.getProfessores);
 
-//Rota para adicionar o professor
 
-router.post('/escola/professores', controllerProfessor.postProfessores)
-
-//Rota para verificar a quantidade de alunos
-
-router.get('/professor/aluno', controllerAluno.getAlunos)
 
 
 
