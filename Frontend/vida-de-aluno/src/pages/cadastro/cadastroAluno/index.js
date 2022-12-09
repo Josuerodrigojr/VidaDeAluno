@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom"
 import { Button } from "reactstrap"
+import CabecalhoSemLogin from '../../cabecalhos/cabecalhoSemLogin'
 
 
 
 function cadastroAluno () {
     return<>
+<CabecalhoSemLogin/>
+
     <div class="centralizar">
             <div>
 

@@ -2,9 +2,12 @@ import { Link } from 'react-router-dom'
 import { Button } from 'reactstrap'
 import './style.scss'
 
+import CabecalhoSemLogin from '../cabecalhos/cabecalhoSemLogin'
+
 
 function Login (){
     return<>
+    <CabecalhoSemLogin/>
     <h1>Login</h1>
 
     <br/>

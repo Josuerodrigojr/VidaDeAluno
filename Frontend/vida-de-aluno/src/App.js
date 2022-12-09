@@ -1,9 +1,13 @@
 import Rodape from './pages/rodape'
 import './App.scss';
+import CabecalhoComLogin from './pages/cabecalhos/cabecalhoComLogin/index'
 
 function App() {
+  
   return (
+   
     <div className="App">
+    <CabecalhoComLogin/>
     <h1>Sobre o site:</h1>
     <div className='display'>
     <div>

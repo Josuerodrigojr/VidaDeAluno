@@ -2,10 +2,13 @@ import { Link } from "react-router-dom"
 import { Button } from "reactstrap"
 import './style.scss'
 
+import CabecalhoSemLogin from '../../cabecalhos/cabecalhoSemLogin'
+
 
 
 function cadastroEscola () {
     return<>
+    <CabecalhoSemLogin/>
     <div class="centralizar">
             <div>
 
@@ -18,7 +21,7 @@ function cadastroEscola () {
                 <br/>
                 <br/>
 
-                <label for="resumo">Fale um pouco sobre vocês: </label>
+                <label for="resumo">Fale um pouco sobre sua escola: </label>
                 <br/>
                 <br/>
                 <textarea className="resumo" type="text"/>

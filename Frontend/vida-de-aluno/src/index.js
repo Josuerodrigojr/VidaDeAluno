@@ -1,7 +1,6 @@
 import React from 'react';
 import { createRoot } from "react-dom/client";
 import './index.css';
-import Cabecalho from './pages/cabecalhoComLogin';
 import Cadastro from './pages/cadastro';
 import CadastroAluno from './pages/cadastro/cadastroAluno'
 import CadastroProfessor from './pages/cadastro/cadastroProfessor'
@@ -16,7 +15,6 @@ const root = createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
      <BrowserRouter>
-    <Cabecalho/>
     <Routes>
   <Route path='/' element={<App />} />
   <Route path='/login' element={<Login/>}/>

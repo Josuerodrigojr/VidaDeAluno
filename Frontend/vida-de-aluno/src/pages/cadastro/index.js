@@ -7,8 +7,16 @@ import { Button } from 'reactstrap'
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
 
+import CabecalhoSemLogin from '../cabecalhos/cabecalhoSemLogin'
+
 function cadastro() {
-  return (<div className='centralizar'>
+  return (<div>
+    <CabecalhoSemLogin/>
+    <h1>Escolha a sua forma de cadastro:</h1>
+    
+    <br/>
+    
+    <div  className='centralizar'>
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         component="img"
@@ -70,6 +78,7 @@ function cadastro() {
         <Link to='/'><Button  className='centralizar'>Cancelar</Button></Link>
       </CardActions>
     </Card>
+    </div>
     </div>
   );
 }
