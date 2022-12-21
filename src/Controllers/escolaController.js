@@ -1,4 +1,4 @@
-const escolaService = require ('../Service/escolaService')
+const escolaService = require ('../service/escolaService')
 
 
 const getEscolas = async (req,res) =>{

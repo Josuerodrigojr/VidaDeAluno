@@ -1,4 +1,4 @@
-const alunoRespositorio = require('../Repository/aluno')
+const alunoRespositorio = require('../repositories/aluno')
 
 
 

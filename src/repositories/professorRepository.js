@@ -1,5 +1,5 @@
 
-const Professor = require('../Model/professor')
+const Professor = require('../model/professor')
 
 
 const getProfessores = async()=>{
@@ -33,17 +33,12 @@ const getProfessoresEmail = async(email) =>{
     })
 }
 
-const postProfessores = async(primeiroNome, ultimoNome, telefone, email, escola, senha)=>{
+const postProfessores = async(professor)=>{
 
-    return await Professor.create({
-            primeiroNome,
-            ultimoNome,
-            telefone,
-            email,
-            escola,
-            senha,
-    })
+    return await Professor.create(professor)
 }
+
+
 
 module.exports = {
 getProfessores,

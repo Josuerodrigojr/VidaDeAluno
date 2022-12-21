@@ -1,7 +1,7 @@
 const express = require('express')
-const controllerProfessor = require('./Controllers/professorController')
-const controllerAluno = require('./Controllers/aluno')
-const controllerEscola = require('./Controllers/escolaController')
+const controllerProfessor = require('./controllers/professorController')
+const controllerAluno = require('./controllers/aluno')
+const controllerEscola = require('./controllers/escolaController')
 
 const router = express.Router()
 
@@ -13,7 +13,9 @@ router.post('/professores', controllerProfessor.postProfessores)
 
 //Rota para verificar a quantidade de alunos
 
-router.get('/professor/aluno', controllerAluno.getAlunos)
+router.get('/professores/aluno', controllerAluno.getAlunos)
+
+
 
 //Rota dos alunos
 
@@ -29,7 +31,7 @@ router.get('/escola/professores', controllerProfessor.getProfessores);
 
 router.get('/escola', controllerEscola.getEscolas)
 
-//Rotas para a visualização da escola para os professores.
+//Rotas para a visualização da escola para os professores. Ainda estou vendo se vou deixar essas rotas.
 router.get('/escola/professores/:email', controllerProfessor.getProfessoresEmail)
 
 router.get('/escola/professores/:id', controllerProfessor.getProfessoresId)

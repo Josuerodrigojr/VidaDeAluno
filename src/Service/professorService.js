@@ -1,9 +1,10 @@
 
-const Professor = require('../Model/professor')
-const professorRepository = require('../Repository/professorRepository')
+const Professor = require('../model/professor')
+const professorRepository = require('../repositories/professorRepository')
+const escolaRepository = require('../repositories/escolaRepository')
 
 
-
+// Para verificar todos os professores cadastrados
 const getProfessores = async()=>{
     try {
         const professor = await professorRepository.getProfessores();
@@ -36,6 +37,8 @@ const getProfessores = async()=>{
         }
     }
 }
+
+//Para buscar professores pelo id
 
 const getProfessoresId = async(id)=>{
   
@@ -70,6 +73,8 @@ const getProfessoresId = async(id)=>{
     }
 }
 
+//Para buscar professores por email
+
 const getProfessoresEmail = async(email)=>{
     
     try{
@@ -101,9 +106,15 @@ const getProfessoresEmail = async(email)=>{
     }
 }
 
-const postProfessores = async(primeiroNome, ultimoNome, telefone, email, escola, senha)=>{
+//Registro dos professores
+
+const postProfessores = async(primeiroNome, ultimoNome, telefone, email, escola, senha, materia)=>{
+    const professor = {primeiroNome, ultimoNome, telefone, email, escola, senha, materia}
+    console.log("professor", professor)
     try{
         const verificacaoEmail = await professorRepository.getProfessoresEmail(email)
+
+
 
         if(verificacaoEmail){
             return{
@@ -115,25 +126,33 @@ const postProfessores = async(primeiroNome, ultimoNome, telefone, email, escola,
             }
 
         }
+      
+        const verificacaoRegistroEscola = await escolaRepository.getEscolaNome(escola);
+
+        if(!verificacaoRegistroEscola){
+            return{
+                statusCode:400,
+                data:{
+                    message: 'A escola não está registrada'
+                }
+            }
+        }
         
         
-        if(!primeiroNome & !ultimoNome & !telefone & !email & !escola & !senha){
+        if(!primeiroNome || !ultimoNome || !telefone || !email || !escola || !senha){
             
-            
-          return{
+            return{
                     statusCode: 400,
                     data:{
                         message: 'O professor não pode ser cadastrado, pois não tem todos os dados preenchidos!',
                         
                     }
                 }
-            } else {
+            } else { 
+                    
+                console.log('entrei aqui')    
+                const professores = await professorRepository.postProfessores(professor)
 
-                
-
-                
-                
-                const professores = await professorRepository.postProfessores(primeiroNome, ultimoNome, telefone, email, escola, senha)
                 return{
                     
                     statusCode: 200,

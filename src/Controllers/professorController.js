@@ -1,5 +1,5 @@
 const database = require('../../db')
-const professorService = require('../Service/professorService')
+const professorService = require('../service/professorService')
 
 const getProfessores = async(req,res) => {
     const professores = await professorService.getProfessores()
@@ -25,11 +25,14 @@ const getProfessoresEmail = async(req,res) =>{
 }
 
 const postProfessores = async(req,res)=>{
-    const {primeiroNome, ultimoNome, telefone, email, escola, senha} = req.body;
+    const {primeiroNome, ultimoNome, telefone, email, escola, senha, materia} = req.body;
+    
 
 
+    const professores = await professorService.postProfessores(primeiroNome, ultimoNome, telefone, email, escola, senha, materia);
 
-    const professores = await professorService.postProfessores(primeiroNome, ultimoNome, telefone, email, escola, senha);
+    console.log(professores)
+    
     return res.status(professores.statusCode).json(professores.data)
 
 }

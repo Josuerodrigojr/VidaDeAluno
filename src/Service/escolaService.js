@@ -1,4 +1,4 @@
-const escolaRepositorio = require ('../Repository/escolaRepository.js')
+const escolaRepositorio = require ('../repositories/escolaRepository.js')
 
 
 const getEscolas = async() =>{

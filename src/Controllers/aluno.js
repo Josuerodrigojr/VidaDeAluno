@@ -1,4 +1,4 @@
-const alunosService = require('../Service/aluno')
+const alunosService = require('../service/aluno')
 
 
 
